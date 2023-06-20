@@ -1,7 +1,12 @@
 import './App.scss';
+import Authentication from './pages/Auth/Authentication';
 
 function App() {
-  return;
+  return (
+    <div>
+      <Authentication />
+    </div>
+  );
 }
 
 export default App;

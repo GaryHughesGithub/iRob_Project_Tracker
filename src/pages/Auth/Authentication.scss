@@ -1,0 +1,122 @@
+.auth {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 10px;
+    padding-bottom: 50px;
+    border: 1px gray solid;
+
+    img {
+      width: 120px;
+    }
+
+    &--header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+      }
+
+      h4 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #284791;
+        font-size: 20px;
+      }
+
+      ul {
+        background-color: #284791;
+        width: 70px;
+        height: 5px;
+
+        margin: 0;
+        padding: 0;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &--submit {
+      margin-top: 30px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .userField {
+        h3 {
+          margin: 0;
+          padding: 0;
+          color: #284791;
+          margin-bottom: 10px;
+          font-size: 23px;
+        }
+
+        input {
+          margin: 0;
+          padding: 0;
+          margin-bottom: 25px;
+
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px gray solid;
+
+          height: 30px;
+          width: 280px;
+          font-size: 16px;
+        }
+      }
+
+      .passwordReset {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        gap: 50px;
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          display: flex;
+          font-size: 17px;
+
+          gap: 5px;
+        }
+
+        h5 {
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+        }
+      }
+
+      button {
+        width: 180px;
+        background-color: #284791;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+}
