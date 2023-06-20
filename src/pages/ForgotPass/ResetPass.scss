@@ -1,0 +1,49 @@
+.resetPassword {
+  width: 400px;
+  height: fit-content;
+  font-size: 22px;
+
+  margin-top: 50px;
+  padding: 20px;
+  padding-bottom: 50px;
+  border: 1px gray solid;
+
+  &__form {
+    .resetViaEmail {
+      margin-bottom: 10px;
+      h3 {
+        margin: 0;
+        padding: 0;
+        color: #284791;
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+
+      input {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 25px;
+
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px gray solid;
+
+        height: 25px;
+        width: 280px;
+        font-size: 16px;
+      }
+    }
+
+    button {
+      width: 180px;
+      background-color: #284791;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.postRegister {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 400px;
+  height: fit-content;
+
+  font-size: 22px;
+
+  margin-top: 50px;
+  padding: 20px;
+  padding-bottom: 50px;
+  border: 1px gray solid;
+
+  button {
+    width: 180px;
+    background-color: #284791;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+
+    cursor: pointer;
+  }
+}
