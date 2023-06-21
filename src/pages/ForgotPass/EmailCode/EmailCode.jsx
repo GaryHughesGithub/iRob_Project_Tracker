@@ -11,12 +11,12 @@ export default function EmailCode() {
         </p>
 
         <div className='emailCode__form--digits'>
-          <input type='text' maxLength={1} placeholder='_' />
-          <input type='text' maxLength={1} placeholder='_' />
-          <input type='text' maxLength={1} placeholder='_' />
-          <input type='text' maxLength={1} placeholder='_' />
-          <input type='text' maxLength={1} placeholder='_' />
-          <input type='text' maxLength={1} placeholder='_' />
+          <input type='number' maxLength={1} placeholder='_' pattern='[0-9]' />
+          <input type='number' maxLength={1} placeholder='_' pattern='[0-9]' />
+          <input type='number' maxLength={1} placeholder='_' pattern='[0-9]' />
+          <input type='number' maxLength={1} placeholder='_' pattern='[0-9]' />
+          <input type='number' maxLength={1} placeholder='_' pattern='[0-9]' />
+          <input type='number' maxLength={1} placeholder='_' pattern='[0-9]' />
         </div>
 
         <button>Confirm</button>
