@@ -22,12 +22,12 @@ export default function Register() {
 
         <div className='signUp__form--Password'>
           <h3>Password</h3>
-          <input type='text' placeholder='*****' />
+          <input type='password' placeholder='*****' />
         </div>
 
         <div className='signUp__form--ConfirmPassword'>
           <h3>Confirm password</h3>
-          <input type='text' placeholder='*****' />
+          <input type='password' placeholder='*****' />
         </div>
 
         <button>Sign up</button>

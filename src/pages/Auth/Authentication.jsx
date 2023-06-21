@@ -11,7 +11,7 @@ export default function Authentication() {
 
         <div className='auth__form--header'>
           <h1>Log in to Your Account</h1>
-          <h4>Don't have an account? Sign up</h4>
+          <a href='/'>Don't have an account? Sign up</a>
           <ul />
         </div>
 
@@ -23,7 +23,7 @@ export default function Authentication() {
 
           <div className='userField'>
             <h3>Password</h3>
-            <input type='text' placeholder='*****' />
+            <input type='password' placeholder='*****' />
           </div>
 
           <div className='passwordReset'>
@@ -34,7 +34,7 @@ export default function Authentication() {
               <li>Remember me</li>
             </ul>
 
-            <h5>Forgot Password?</h5>
+            <a href='/'>Forgot Password?</a>
           </div>
 
           <button>Login</button>
