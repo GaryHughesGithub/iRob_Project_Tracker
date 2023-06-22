@@ -1,27 +1,19 @@
 import './App.scss';
 
-import Authentication from './pages/Auth/Authentication';
-import EmailCode from './pages/ForgotPass/EmailCode/EmailCode';
-import NewPassword from './pages/ForgotPass/NewPassword/NewPassword';
-import ResetPass from './pages/ForgotPass/ResetPass';
-import PostRegister from './pages/Register/PostRegister/PostRegister';
-import Register from './pages/Register/Register';
+import Authentication from './components/Auth/Authentication';
+import Dashboard from './components/Dashboard/Dashboard';
+import EmailCode from './components/ForgotPass/EmailCode/EmailCode';
+import NewPassword from './components/ForgotPass/NewPassword/NewPassword';
+import ResetPass from './components/ForgotPass/ResetPass';
+import Menu from './components/Menu/Menu';
+import PostRegister from './components/Register/PostRegister/PostRegister';
+import Register from './components/Register/Register';
 
 function App() {
   return (
-    <div>
-      <Authentication />
-
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '100px' }}>
-        <Register />
-        <PostRegister />
-      </div>
-
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-        <ResetPass />
-        <EmailCode />
-        <NewPassword />
-      </div>
+    <div style={{ display: 'flex', gap: '10px' }}>
+      <Menu />
+      <Dashboard />
     </div>
   );
 }

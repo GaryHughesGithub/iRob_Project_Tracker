@@ -1,7 +1,7 @@
 import React from 'react';
 import './Authentication.scss';
 
-import Logo from '../../assets/Logo.svg';
+import Logo from '../../assets/Login/Logo.svg';
 
 export default function Authentication() {
   return (

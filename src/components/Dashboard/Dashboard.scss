@@ -1,0 +1,68 @@
+.dashboard {
+  width: 90vw;
+
+  border-bottom: 1px lightgray solid;
+
+  padding: 15px;
+
+  padding-bottom: 10px;
+  height: fit-content;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--Rblock {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      input {
+        height: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px lightgray solid;
+        width: 280px;
+      }
+
+      .circle {
+        border: 1px lightgray solid;
+        width: 45px;
+        border-radius: 50%;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px lightgray solid;
+        border-radius: 20px;
+        gap: 10px;
+
+        img {
+          margin-top: 5px;
+        }
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li {
+            font-size: 12px;
+          }
+
+          h3 {
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .chevron {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
