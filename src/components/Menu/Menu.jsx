@@ -23,14 +23,14 @@ export default function Menu() {
           <li>
             <img src={Projects} />
           </li>
-          <li>Projects</li>
+          <li>My PLC List</li>
         </ul>
 
         <ul className='unselected'>
           <li>
             <img src={Tasks} />
           </li>
-          <li>Tasks</li>
+          <li>All PLC List</li>
         </ul>
       </div>
 
