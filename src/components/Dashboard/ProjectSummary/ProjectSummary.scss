@@ -1,9 +1,15 @@
 .dashboardFlex {
   display: flex;
-  gap: 200px;
+  gap: 60px;
   margin-top: 20px;
 
   .L-Block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .R-Block {
     display: flex;
     flex-direction: column;
     gap: 30px;
