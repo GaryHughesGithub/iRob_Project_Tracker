@@ -19,7 +19,7 @@ export default function Workload() {
       <section className='workload__rewards'>
         <div>
           <section className='counters'>
-            <div className='topCounter'>6</div>
+            <div className='topCounter'>7</div>
             <div className='counter' />
             <div className='counter' />
           </section>
@@ -28,7 +28,7 @@ export default function Workload() {
 
         <div>
           <section className='counters'>
-            <div className='topCounter'>6</div>
+            <div className='topCounter'>7</div>
             <div className='counter' />
             <div className='counter' />
           </section>
@@ -37,7 +37,7 @@ export default function Workload() {
 
         <div>
           <section className='counters'>
-            <div className='topCounter'>6</div>
+            <div className='topCounter'>7</div>
             <div className='counter' />
             <div className='counter' />
           </section>
@@ -46,7 +46,7 @@ export default function Workload() {
 
         <div>
           <section className='counters'>
-            <div className='topCounter'>6</div>
+            <div className='topCounter'>7</div>
             <div className='counter' />
             <div className='counter' />
           </section>
@@ -55,7 +55,7 @@ export default function Workload() {
 
         <div>
           <section className='counters'>
-            <div className='topCounter'>6</div>
+            <div className='topCounter'>7</div>
             <div className='counter' />
             <div className='counter' />
           </section>
