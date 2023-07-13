@@ -1,0 +1,38 @@
+.myTable {
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  align-items: center;
+
+  &__container {
+    max-height: 700px;
+    overflow-y: scroll;
+  }
+  table {
+    height: 800px;
+    width: 1000px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  th,
+  td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: gray;
+  }
+  th {
+    text-align: left;
+    color: white;
+  }
+  thead th {
+    background-color: #284791;
+  }
+  tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  tbody td {
+    position: relative;
+  }
+}

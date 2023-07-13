@@ -1,7 +1,11 @@
 .dashboardFlex {
   display: flex;
-  gap: 150px;
+  gap: 140px;
   margin-top: 20px;
+  width: fit-content;
+
+  margin-left: auto;
+  margin-right: auto;
 
   .L-Block {
     display: flex;
