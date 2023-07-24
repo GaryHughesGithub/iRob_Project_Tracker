@@ -11,25 +11,18 @@ export default function MyTable() {
         Header: 'ID',
         accessor: 'id',
       },
-
       {
-        Header: 'TCP/IP Address',
-        accessor: 'tcp/ip_address',
+        Header: 'PLC Name',
+        accessor: 'plc_name',
+      },
+      {
+        Header: 'Progress',
+        accessor: 'progress',
       },
 
       {
-        Header: 'Allocation Group',
-        accessor: 'allocation_group',
-      },
-
-      {
-        Header: 'Completed',
-        accessor: 'completed',
-      },
-
-      {
-        Header: 'Comment',
-        accessor: 'comment',
+        Header: 'Action',
+        accessor: '',
       },
     ],
     []
@@ -58,10 +51,25 @@ export default function MyTable() {
             {rows.map((row) => {
               prepareRow(row);
               return (
-                <tr {...row.getRowProps()}>
+                <tr style={{ width: '200px' }} {...row.getRowProps()}>
                   {row.cells.map((cell) => (
                     <td {...cell.getCellProps()}> {cell.render('Cell')}</td>
                   ))}
+
+                  <td>
+                    <button
+                      style={{
+                        padding: '10px',
+                        border: 'none',
+                        backgroundColor: ' #284791',
+                        color: 'white',
+                        borderRadius: '10px',
+                        paddingInline: '20px',
+                      }}
+                    >
+                      View More
+                    </button>
+                  </td>
                 </tr>
               );
             })}
