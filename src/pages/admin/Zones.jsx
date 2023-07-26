@@ -54,7 +54,7 @@ export default function Zones() {
   return (
     <Layout>
       <Modal
-        title="Create New Zone"
+        title={currentZone ? "Edit Zone" : "Create New Zone"}
         modalOpen={modalOpen}
         handleModalClose={() => setModalOpen(false)}>
 
@@ -104,7 +104,7 @@ export default function Zones() {
               <button
                 type="submit"
                 className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">
-                Create
+                {currentZone ? "Save Changes" : "Create"}
               </button>
             </div>
           </form>
@@ -124,7 +124,7 @@ export default function Zones() {
           <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none flex space-x-2">
             <button
               type="button"
-              onClick={() => setModalOpen(true)}
+              onClick={() => handleOpenModal()}
               className="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               Add New Zone
             </button>
