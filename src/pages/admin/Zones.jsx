@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 const plcs = [
   { name: 'IP Addressing Zone 12LH', progress: '80%', status: 'Active' },
-  { name: 'IP Addressing Zone 14LH', progress: '40%', status: 'Pending' },
-  { name: 'IP Addressing Zone 18LH', progress: '90%', status: 'Pending' },
+  { name: 'Configuring Turntables Zone 14LH', progress: '40%', status: 'Pending' },
+  { name: 'Measuring in Robots Zone 18LH', progress: '90%', status: 'Pending' },
 ]
 
 export default function Zones() {

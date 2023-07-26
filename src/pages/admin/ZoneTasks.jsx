@@ -3,10 +3,10 @@ import Layout from '../../components/Admin/Layout';
 import { Link } from 'react-router-dom'
 
 const plcs = [
-  { address: '10-112-48-0', allocation: 'Subnet Name do not use', label: 'Example', comment: 'comment...', completed: 'Yes', engineer: 'Engineer..', date: '12-04-23' },
-  { address: '10-112-48-0', allocation: 'Subnet Name do not use', label: 'Example', comment: 'comment...', completed: 'Yes', engineer: 'Engineer..', date: '12-04-23' },
-  { address: '10-112-48-0', allocation: 'Subnet Name do not use', label: 'Example', comment: 'comment...', completed: 'Yes', engineer: 'Engineer..', date: '12-04-23' },
-  { address: '10-112-48-0', allocation: 'Subnet Name do not use', label: 'Example', comment: 'comment...', completed: 'Yes', engineer: 'Engineer..', date: '12-04-23' },
+  { address: '10-112-48-0', allocation: 'Subnet Name do not use', label: 'Example', comment: 'comment...', completed: true, engineer: 'Engineer..', date: '12-04-23' },
+  { address: '10-112-48-0', allocation: 'Subnet Name do not use', label: 'Example', comment: 'comment...', completed: true, engineer: 'Engineer..', date: '12-04-23' },
+  { address: '10-112-48-0', allocation: 'Subnet Name do not use', label: 'Example', comment: 'comment...', completed: false, engineer: 'Engineer..', date: '12-04-23' },
+  { address: '10-112-48-0', allocation: 'Subnet Name do not use', label: 'Example', comment: 'comment...', completed: false, engineer: 'Engineer..', date: '12-04-23' },
 ]
 
 export default function PlcDetail() {
@@ -19,7 +19,7 @@ export default function PlcDetail() {
               IP Addressing Zone 12LH
             </h1>
             <p className="mt-2 text-sm text-gray-700">
-              A list of all PLCs ip addressing in the system.
+              A list of all zone tasks.
             </p>
           </div>
           <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
@@ -59,17 +59,17 @@ export default function PlcDetail() {
                     <th
                       scope="col"
                       className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                      Completed
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       Engineer
                     </th>
                     <th
                       scope="col"
                       className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       Date
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                      Completed
                     </th>
                     <th
                       scope="col"
@@ -94,13 +94,13 @@ export default function PlcDetail() {
                         {plc.comment}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {plc.completed}
-                      </td>
-                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {plc.engineer}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {plc.date}
+                      </td>
+                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                        <input type="checkbox" checked={plc.completed} />
                       </td>
                       <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
                         <Link
@@ -114,13 +114,6 @@ export default function PlcDetail() {
                           className="text-indigo-600 hover:text-indigo-900 ml-5">
                           View<span className="sr-only">, {plc.address}</span>
                         </Link>
-
-                        <button
-                          type="button"
-                          className="text-white hover:text-white ml-5 bg-indigo-600 p-2 rounded-md">
-                          Mark Completed
-                          <span className="sr-only">, {plc.address}</span>
-                        </button>
                       </td>
                     </tr>
                   ))}

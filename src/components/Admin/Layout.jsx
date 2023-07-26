@@ -3,20 +3,17 @@ import { Dialog, Menu, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
   BellIcon,
-  CalendarIcon,
-  ChartPieIcon,
   Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
   HomeIcon,
-  UsersIcon,
   XMarkIcon,
+  MapPinIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+import logo from '../../assets/images/logo.png'
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: false },
-  { name: 'Zones', href: '/admin/zones', icon: UsersIcon, current: true },
+  { name: 'Zones', href: '/admin/zones', icon: MapPinIcon, current: true },
 ]
 
 const userNavigation = [
@@ -76,11 +73,11 @@ export default function Layout({children}) {
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4">
+                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
                     <div className="flex h-16 shrink-0 items-center">
                       <img
                         className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                         alt="Your Company"
                       />
                     </div>
@@ -94,14 +91,14 @@ export default function Layout({children}) {
                                   href={item.href}
                                   className={classNames(
                                     item.current
-                                      ? 'bg-indigo-700 text-white'
-                                      : 'text-indigo-200 hover:text-white hover:bg-indigo-700',
+                                      ? 'bg-gray-50 text-indigo-600'
+                                      : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50',
                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                   )}
                                 >
                                   <item.icon
                                     className={classNames(
-                                      item.current ? 'text-white' : 'text-indigo-200 group-hover:text-white',
+                                      item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600',
                                       'h-6 w-6 shrink-0'
                                     )}
                                     aria-hidden="true"
@@ -115,10 +112,10 @@ export default function Layout({children}) {
                         <li className="mt-auto">
                           <a
                             href="#"
-                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
                           >
                             <Cog6ToothIcon
-                              className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
+                              className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
                               aria-hidden="true"
                             />
                             Settings
@@ -136,15 +133,15 @@ export default function Layout({children}) {
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4">
-            <div className="flex h-16 shrink-0 items-center">
+          <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
+            <div className="flex h-16 pt-10 shrink-0 items-center">
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=white"
-                alt="Your Company"
+                className="h-[60px] w-auto"
+                src={logo}
+                alt="iRob Logo"
               />
             </div>
-            <nav className="flex flex-1 flex-col">
+            <nav className="flex flex-1 flex-col pt-10">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
                 <li>
                   <ul role="list" className="-mx-2 space-y-1">
@@ -154,14 +151,14 @@ export default function Layout({children}) {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? 'bg-indigo-700 text-white'
-                              : 'text-indigo-200 hover:text-white hover:bg-indigo-700',
+                              ? 'bg-gray-50 text-indigo-600'
+                              : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50',
                             'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                           )}
                         >
                           <item.icon
                             className={classNames(
-                              item.current ? 'text-white' : 'text-indigo-200 group-hover:text-white',
+                              item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600',
                               'h-6 w-6 shrink-0'
                             )}
                             aria-hidden="true"
@@ -175,10 +172,10 @@ export default function Layout({children}) {
                 <li className="mt-auto">
                   <a
                     href="#"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
                   >
                     <Cog6ToothIcon
-                      className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
+                      className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
                       aria-hidden="true"
                     />
                     Settings
@@ -197,7 +194,7 @@ export default function Layout({children}) {
             </button>
 
             {/* Separator */}
-            <div className="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true" />
+            <div className="h-6 w-px bg-gray-200 lg:hidden" aria-hidden="true" />
 
             <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
               <form className="relative flex flex-1" action="#" method="GET">
@@ -223,7 +220,7 @@ export default function Layout({children}) {
                 </button>
 
                 {/* Separator */}
-                <div className="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/10" aria-hidden="true" />
+                <div className="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-200" aria-hidden="true" />
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative">
