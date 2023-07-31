@@ -1,20 +1,28 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
+import { useLocation } from 'react-router-dom'
 import {
   Bars3Icon,
   BellIcon,
   Cog6ToothIcon,
   HomeIcon,
   XMarkIcon,
-  MapPinIcon
+  MapPinIcon,
+  FolderIcon,
+  BoltIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import logo from '../../assets/images/logo.png'
 
 const navigation = [
-  { name: 'Dashboard', href: '/', icon: HomeIcon, current: false },
-  { name: 'Zones', href: '/admin/zones', icon: MapPinIcon, current: true },
-]
+  { name: 'Dashboard', href: '/', icon: HomeIcon },
+  { name: 'Projects', href: '/admin/projects', icon: FolderIcon },
+  { name: 'Zones', href: '/admin/zones', icon: MapPinIcon },
+  { name: 'Skills', href: '/admin/skills', icon: BoltIcon },
+].map(item => ({
+  ...item,
+  current: item.href === location.pathname,
+}))
 
 const userNavigation = [
   { name: 'Your profile', href: '#' },
@@ -27,6 +35,8 @@ function classNames(...classes) {
 
 export default function Layout({children}) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+
+  const location = useLocation();
 
   return (
     <>
