@@ -3,16 +3,12 @@ import Layout from '../../components/Admin/Layout';
 import { Link } from 'react-router-dom';
 
 const zones = [
-  { name: 'IP Addressing Project 12LH', progress: '80%', status: 'Active' },
+  { name: 'JLR' },
   {
-    name: 'Configuring Turntables Project 14LH',
-    progress: '40%',
-    status: 'Pending',
+    name: 'Vauxhall',
   },
   {
-    name: 'Measuring in Robots Project 18LH',
-    progress: '90%',
-    status: 'Pending',
+    name: 'BMW',
   },
 ];
 
@@ -56,18 +52,7 @@ export default function Projects() {
                     >
                       Name
                     </th>
-                    <th
-                      scope='col'
-                      className='px-3 py-3.5 text-left text-sm font-semibold text-gray-900'
-                    >
-                      Progress
-                    </th>
-                    <th
-                      scope='col'
-                      className='px-3 py-3.5 text-left text-sm font-semibold text-gray-900'
-                    >
-                      Status
-                    </th>
+
                     <th
                       scope='col'
                       className='relative py-3.5 pl-3 pr-4 sm:pr-3'
@@ -82,12 +67,7 @@ export default function Projects() {
                       <td className='whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3'>
                         {zone.name}
                       </td>
-                      <td className='whitespace-nowrap px-3 py-4 text-sm text-gray-500'>
-                        {zone.progress}
-                      </td>
-                      <td className='whitespace-nowrap px-3 py-4 text-sm text-gray-500'>
-                        {zone.status}
-                      </td>
+
                       <td className='relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3'>
                         <button className='text-indigo-600 hover:text-indigo-900'>
                           Edit<span className='sr-only'>, {zone.name}</span>
